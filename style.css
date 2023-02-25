@@ -10,8 +10,8 @@ body{
 }
 .container{
     margin: 0 auto;
-    max-width: 550px;
-    padding: 0 10px ;
+    max-width: 570px;
+    padding: 0 20px ;
 }
 
 
@@ -125,4 +125,40 @@ body{
     transition: all .3s;
     background-color: rgb(88, 179, 179);
     margin-right: 5px;
+}
+
+
+@media(max-width: 800px){
+    .clicker{
+        padding-top: 50px;
+    }
+}
+
+
+@media(max-width: 400px){
+    .clicker{
+        padding-top: 35px;
+    }
+    .clicker__bg-color{
+        margin-bottom: 25px;
+        height: 350px;
+    }
+    .clicker__title{
+        margin-bottom: 35px;
+    
+    }
+}
+
+@media(max-width: 320px){
+    .clicker{
+        padding-top: 35px;
+    }
+    .clicker__bg-color{
+        margin-bottom: 25px;
+        height: 250px;
+    }
+    .clicker__title{
+        margin-bottom: 35px;
+    
+    }
 }
