@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 0 10px ;
+}
+
+
+
+
+
+
+
+
+
+.clicker{
+    padding-top: 125px;
+    text-align: center;
+}
+.clicker__title{
+    margin-bottom: 45px;
+    font-size: 36px;
+
+}
+
+.clicker__bg-color{
+    height: 500px;
+    background-color: rgb(88, 179, 179);
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+    border-radius: 15px;
+}
+
+.clicker__tap{
+    font-weight: 700;
+    font-size: 40px;
+    padding: 45px;
+    color: white;
+    border-radius: 25px;
+    transition: all .5s;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.clicker__tap span{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    opacity: .7;
+}
+
+.clicker__tap:hover{
+    background-color: rgba(0, 0, 0,0.2);
+    cursor: pointer;
+}
+.clicker__tap:active{
+    padding: 75px;
+    background-color: rgba(0, 0, 0,0.2);
+    cursor: pointer;
+}
+
+
+.clicker__text{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.clicker__reset{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all .3s;
+    background-color: rgb(88, 179, 179);
+
+}
+
+
+.clicker__color{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all .3s;
+    background-color: rgb(88, 179, 179);
+    margin-right: 5px;
+}
+.clicker__reset:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}  
+.clicker__color:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}  
+.clicker__btn-lock:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+.clicker__btn-lock{
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all .3s;
+    background-color: rgb(88, 179, 179);
+    margin-right: 5px;
+}
