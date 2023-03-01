@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Color#2</title>
 </head>
@@ -16,13 +16,16 @@
                 <div class="clicker__tap" id="tap">Tap<br><span>or press space</span></div>
             </div>
             <div class="clicker__text" id="count-out">Count: 0</div>
-            <a class="clicker__color" href="#" id="color">#58B3B3</a>
-            <a class="clicker__btn-lock" href="#" data-type="lock" ><i class="fa-solid fa-lock-open" data-type="lock"></i></a>
-            <a class="clicker__reset" href="#" id="reset"><i class="fa-solid fa-rotate-right"></i></a>
+            <div class="clicker__buttons">
+                <div class="clicker__pop-up" id="pop-up">Copied color</div>
+                <a class="clicker__color" href="#" id="color" data-type="copy">#58B3B3</a>
+                <a class="clicker__btn-lock" href="#" data-type="lock" ><i class="fa-solid fa-lock-open" data-type="lock"></i></a>
+                <a class="clicker__reset" href="#" id="reset"><i class="fa-solid fa-rotate-right"></i></a>
+            </div>
         </div>
     </div>
 
 
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
