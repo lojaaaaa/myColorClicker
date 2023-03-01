@@ -7,6 +7,8 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+
+    height: 100vh;
 }
 .container{
     margin: 0 auto;
@@ -44,6 +46,7 @@ body{
 }
 
 .clicker__tap{
+
     font-weight: 700;
     font-size: 40px;
     padding: 45px;
@@ -96,6 +99,7 @@ body{
 
 
 .clicker__color{
+
     text-decoration: none;
     color: white;
     display: inline-block;
@@ -104,7 +108,9 @@ body{
     border-radius: 10px;
     transition: all .3s;
     background-color: rgb(88, 179, 179);
+
     margin-right: 5px;
+
 }
 .clicker__reset:hover{
     background-color: rgba(0, 0, 0,0.5);
@@ -126,6 +132,61 @@ body{
     background-color: rgb(88, 179, 179);
     margin-right: 5px;
 }
+.clicker__buttons{
+    position: relative;
+    display: inline-block;
+}
+.clicker__pop-up{
+    position: absolute;
+    z-index: 30;
+    top: -70%;
+    left: 5%;
+    visibility: hidden;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    width: 100px;
+    padding: 8px 10px;
+    background-color: rgba(0, 0, 0,0.7);
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.clicker__pop-up::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.clicker__pop-up--active{
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media(max-width: 800px){
