@@ -3,11 +3,16 @@ const reset = document.querySelector('#reset')
 const bgColor = document.querySelector('#bg-color')
 const color = document.querySelector('#color')
 const clicker = document.querySelector('#clicker')
+const popUp = document.querySelector('#pop-up')
+
 let count = 0;
+
+
+
 
 //клик на пробел
 document.addEventListener('keydown', (event) => {
-    event.preventDefault()
+    console.log(event)
     if (event.code.toLowerCase() === 'space'){
         setRandomColors()
         count++
@@ -15,7 +20,7 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-//закрытие замочка
+//закрытие замочка, копирование цвета и всплывающее окошко
 document.addEventListener('click', (event) => {
     const type = event.target.dataset.type
     if (type === 'lock'){
@@ -24,9 +29,32 @@ document.addEventListener('click', (event) => {
         : event.target.children[0]
         node.classList.toggle('fa-lock-open')
         node.classList.toggle('fa-lock')
+        popUp.classList.remove('clicker__pop-up--active')
+    }
+    else if (type === 'copy'){
+        copyToClick(event.target.textContent)
+        popUp.classList.add('clicker__pop-up--active')
+
+    }
+    else{
+        popUp.classList.remove('clicker__pop-up--active')
+    }
+})
+
+/*
+//копирование строки при нажатии на кнопку цвета
+color.addEventListener('click',(event) => {
+    const type = event.target.dataset.type
+    if (type === 'copy'){
+        copyToClick(event.target.textContent)
+        popUp.classList.add('clicker__pop-up--active')
     }
 
+
 })
+*/
+
+
 //клик на тап
 tap.addEventListener('click', (event) =>{
     reset.addEventListener('click', (event) =>{
@@ -38,8 +66,15 @@ tap.addEventListener('click', (event) =>{
     if (setRandomColors()!= 1){
         document.querySelector('#color').innerHTML = setRandomColors()
     }
+    popUp.classList.remove('clicker__pop-up--active')
+
     
 })
+
+//копирование
+function copyToClick(text){
+    return navigator.clipboard.writeText(text)
+}
 
 //генерация цветов
 function generateRandomColor(){
@@ -65,3 +100,4 @@ function setRandomColors(){
 
     return color
 }
+
